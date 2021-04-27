@@ -55,8 +55,8 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          0
-#define NOZZLE_Y          0
+#define NOZZLE_X          -2
+#define NOZZLE_Y          -6
 
 /**
  * Minimal Z height (in mm) before homing (G28) for Z clearance above the bed, clamps, ...
@@ -103,9 +103,9 @@
  * If you have a dual nozzle the offsets are calculated from the primary nozzle (the one plugged in to E0)
  */
 #define SENSOR_LEFT        0
-#define SENSOR_RIGHT       0
+#define SENSOR_RIGHT       27
 #define SENSOR_FRONT       0
-#define SENSOR_BEHIND      62
+#define SENSOR_BEHIND      14
 
 /**
  * Number of grid points in each direction
@@ -116,7 +116,7 @@
 /**
  * Margin around perimiter of bed for probing (will not probe outside this margin)
  */
-#define BED_MARGIN         1
+#define BED_MARGIN         30
 
 /**
  * Servo probe deploy and stow angle`s
@@ -1531,9 +1531,9 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 190
+#define X_BED_SIZE 200
 #if ENABLED(LARGE_BED)
-  #define Y_BED_SIZE 210
+  #define Y_BED_SIZE 195
 #else
   #define Y_BED_SIZE 200
 #endif
